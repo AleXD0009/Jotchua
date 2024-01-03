@@ -6,7 +6,7 @@ let fileName;
 let apiUrl;
 let enviando = false;
 const handler = async (m, { command, usedPrefix, conn, text }) => {
-  if (!text) throw `_*< DESCARGAS - PLAY v2 />*_\n\n*Hace falta el título del video de YouTube.*\n\n*Ejemplo:* _${usedPrefix + command} Good Feeling - Flo Rida_\n\n*Ejemplo 2:* _${usedPrefix + command} https://youtu.be/JLWRZ8eWyZo?si=EmeS9fJvS_OkDk7p_`;
+  if (!text) throw `_*DESCARGA - PLAY v2*_\n\n*Hace falta el título del video de YouTube.*\n\n*Ejemplo:* _${usedPrefix + command} turn it up (feat. 6arelyhuman)_\n\n*Ejemplo 2:* _${usedPrefix + command} https://youtu.be/QW9NenTTHI0?si=LRIv1ISfcJhARCrD_`;
 if (enviando) return;
     enviando = true
   try {

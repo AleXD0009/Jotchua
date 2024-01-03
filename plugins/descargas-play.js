@@ -8,7 +8,7 @@ let limit2 = 400;
 let limit_a1 = 50;
 let limit_a2 = 400;
 const handler = async (m, {conn, command, args, text, usedPrefix}) => {
-  if (!text) throw `_*< DESCARGAS - PLAY />*_\n\n*[ ℹ️ ] Hace falta el título o enlace del video de YouTube.*\n\n*[ 💡 ] Ejemplo:* _${usedPrefix + command} Good Feeling - Flo Rida_`;
+  if (!text) throw `_*DESCARGA - PLAY*_\n\n*Hace falta el título o enlace del video de YouTube.*\n\n*Ejemplo:* _${usedPrefix + command} turn it up (feat. 6arelyhuman)_`;
     const yt_play = await search(args.join(' '));
     let additionalText = '';
     if (command === 'play') {
@@ -38,7 +38,7 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
     await conn.sendMessage(m.chat, {audio: buff_aud, mimetype: 'audio/mpeg', fileName: ttl + `.mp3`}, {quoted: m});   
     return;    
     }} catch {
-    throw '_*< DESCARGAS - PLAY />*_\n\n*[ ℹ️ ] Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*';    
+    throw '_*DESCARGAS - PLAY*_\n\n*Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*';    
     }}
     if (command == 'play2') {
     try {   
@@ -50,7 +50,7 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
     const fileSizeInMB2 = fileSizeInKB2 / 1024;
     const size2 = fileSizeInMB2.toFixed(2);       
     if (size2 >= limit2) {  
-    await conn.sendMessage(m.chat, {text: `_*< DESCARGAS - PLAY />*_\n\n*[ ✔ ] Descargue su vídeo en ${video}*`}, {quoted: m});
+    await conn.sendMessage(m.chat, {text: `_*DESCARGA - PLAY*_\n\n*Descargue su vídeo en ${video}*`}, {quoted: m});
     return;    
     }     
     if (size2 >= limit1 && size2 <= limit2) {  
@@ -60,11 +60,11 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
     await conn.sendMessage(m.chat, {video: buff_vid, mimetype: 'video/mp4', fileName: ttl2 + `.mp4`}, {quoted: m});   
     return;    
     }} catch {
-    throw '_*< DESCARGAS - PLAY />*_\n\n*[ ℹ️ ] Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*';    
+    throw '_*DESCARGA - PLAY*_\n\n*Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*';    
     }
   }
 };
-handler.command = /^(play|play2)$/i;
+handler.command = /^(play|play2|musica)$/i;
 export default handler;
 
 async function search(query, options = {}) {

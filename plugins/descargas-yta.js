@@ -78,7 +78,7 @@ const handler = async (m, {text, conn, args, usedPrefix, command}) => {
         conn.sendMessage(m.chat, {audio: {url: ress.url}, fileName: __res[0].title + '.mp3', mimetype: 'audio/mpeg'}, {quoted: m});
         await conn.sendMessage(m.chat, {text: '*Audio descargado exitosamente.*', edit: key}, {quoted: m});
       } catch {
-        await conn.sendMessage(m.chat, {text: `*[ ❌ ] El audio no pudo ser descargado ni enviado, vuelva a intentarlo.*`, edit: key}, {quoted: m});
+        await conn.sendMessage(m.chat, {text: `*❌ El audio no pudo ser descargado ni enviado, vuelva a intentarlo.*`, edit: key}, {quoted: m});
         throw '*Error, no fue posible descargar el audio.*';
       }
     }

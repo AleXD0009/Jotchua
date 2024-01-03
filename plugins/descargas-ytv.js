@@ -64,14 +64,14 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
     const ttl = yt.title;
     const size = yt.video[q].fileSizeH;
     await conn.sendMessage(m.chat, {video: {url: dl_url}, fileName: `${ttl}.mp4`, mimetype: 'video/mp4', caption: `*▢ Titulo:* ${ttl}\n*▢ Peso Del Video:* ${size}`, thumbnail: await fetch(yt.thumbnail)}, {quoted: m});
-    await conn.sendMessage(m.chat, {text: '*[ ✔ ] Video descargado exitosamente.*', edit: key}, {quoted: m});
+    await conn.sendMessage(m.chat, {text: '*Video descargado exitosamente.*', edit: key}, {quoted: m});
     enviando = false
   } catch (ee2) {
     console.log(ee2)
     try {
       const mediaa = await ytMp4(youtubeLink);
       await conn.sendMessage(m.chat, {video: {url: mediaa.result}, fileName: `error.mp4`, caption: `_𝙹𝚘𝚝𝚌𝚑𝚞𝚊 - 𝙱𝚘𝚝_`, thumbnail: mediaa.thumb, mimetype: 'video/mp4'}, {quoted: m});
-      await conn.sendMessage(m.chat, {text: '*[ ✔ ] Video descargado exitosamente.*', edit: key}, {quoted: m});
+      await conn.sendMessage(m.chat, {text: '*Video descargado exitosamente.*', edit: key}, {quoted: m});
       enviando = false
     } catch {
       try {

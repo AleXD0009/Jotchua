@@ -11,7 +11,7 @@ if (enviando) return;
     enviando = true
   try {
     const apiUrls = [
-      `https://api-brunosobrino.zipponodes.xyz/api/ytplay?text=${text}`,
+      `https://api.cafirexos.com/api/ytplay?text=${text}`,
       `https://api-brunosobrino.onrender.com/api/ytplay?text=${text}`
     ];
 
@@ -56,12 +56,12 @@ if (enviando) return;
             }
           } catch {
             enviando = false;
-            throw `_*< DESCARGAS - PLAY V2 />*_\n\n*Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*`;
+            throw `_*DESCARGA - PLAY V2*_\n\n*Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*`;
           }
        }
     }
 
-    const dataMessage = `_*< DESCARGAS - PLAY V2 />*_\n\n▢ *Título:* ${data.resultado.title}\n\n▢ *Publicado:* ${data.resultado.publicDate}\n\n▢ *Canal:* ${data.resultado.channel}\n\n▢ *Vídeo URL:* ${data.resultado.url}`;
+    const dataMessage = `_*DESCARGA - PLAY V2*_\n\n▢ *Título:* ${data.resultado.title}\n\n▢ *Publicado:* ${data.resultado.publicDate}\n\n▢ *Canal:* ${data.resultado.channel}\n\n▢ *Vídeo URL:* ${data.resultado.url}`;
     await conn.sendMessage(m.chat, { text: dataMessage }, { quoted: m });
 
     if (buff) {
@@ -69,11 +69,11 @@ if (enviando) return;
       enviando = false;
     } else {
       enviando = false;
-      throw `_*< DESCARGAS - PLAY V2 />*_\n\n*Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*`;
+      throw `_*DESCARGA - PLAY V2*_\n\n*Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*`;
     }
   } catch (error) {
     enviando = false;
-    throw `_*< DESCARGAS - PLAY V2 />*_\n\n*Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*`;
+    throw `_*DESCARGA - PLAY V2*_\n\n*Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*`;
   }
 };
 handler.command = ['play.1', 'play.2'];

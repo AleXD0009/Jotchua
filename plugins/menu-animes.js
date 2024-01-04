@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, isPrems}) => {
   try {
-    const pp = VideoMenu;
+    const pp = menuvid;
     // let vn = '.src/MenuAnime.mp4'
     const d = new Date(new Date + 3600000);
     const locale = 'es';

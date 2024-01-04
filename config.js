@@ -46,7 +46,7 @@ global.igfg = 'Jotchua-Bot By';
 global.wait = '*Cargando...*';
 
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
-global.imagen2 = fs.readFileSync('./src/MenuAnime.mp4');
+global.videoMenu = fs.readFileSync('./src/MenuAnime.mp4');
 global.imagen3 = fs.readFileSync('./src/Pre Bot Publi.png');
 global.imagen4 = fs.readFileSync('./Menu.png');
 global.imagen5 = fs.readFileSync('./src/+18.jpg');
